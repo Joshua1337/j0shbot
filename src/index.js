@@ -7,7 +7,6 @@ import request from 'request'
 import { connect, message } from 'coffea'
 import { version } from '../package.json'
 
-export const htmlMessage = (msg) => {return {type: 'message',text: msg,options: {parse_mode: 'HTML', reply_to_message_id: evt && evt.raw && evt.raw.message_id}}}
 const networks = connect(config)
 const { log, info } = dude('bot')
 
@@ -49,16 +48,6 @@ networks.on('command', (evt, reply) => {
 		          reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
           }
       })
-  break
-  case 'about':
-    reply({ type: 'action', action: 'typing' })
-    reply(htmlMessage(`JoshBot v${version} - https://github.com/Joshua1337/j0shbot`))
-  break
-  case 'issues':
-  case 'fehler':
-  case 'bug':
-    reply({ type: 'action', action: 'typing' })
-    reply(htmlMessage('<b>Bitte melden Sie Fehler</b> <a href="https://github.com/Joshua1337/j0shbot/issues">hier</a>'))
   break
   case 'help':
     reply({ type: 'action', action: 'typing' })
@@ -284,10 +273,10 @@ networks.on('command', (evt, reply) => {
 })
 
 networks.on('new_chat_participant', (evt, reply) => {
-  log('Received message event: %o', evt)
+  console.log('Received message event: %o', evt)
     reply({
     type: 'message',
-    text: `was geht brudi`,
+    text: `was geht brudi ✌🏼`,
     options: {
       parse_mode: 'markdown',
       reply_to_message_id: evt && evt.raw && evt.raw.message_id
@@ -296,10 +285,10 @@ networks.on('new_chat_participant', (evt, reply) => {
 })
 
 networks.on('left_chat_participant', (evt, reply) => {
-  log('Received message event: %o', evt)
+  console.log('Received message event: %o', evt)
     reply({
     type: 'message',
-    text: `hau rein brudi`,
+    text: `hau rein brudi 💪🏼`,
     options: {
       parse_mode: 'markdown',
       reply_to_message_id: evt && evt.raw && evt.raw.message_id
@@ -307,12 +296,11 @@ networks.on('left_chat_participant', (evt, reply) => {
   })
 })
 
+//voice hashtags
 networks.on('message', (evt, reply) => {
   let hashtags = evt.text.match(/#([a-zA-Z]+)/)
-
   if (hashtags && hashtags.length > 1) {
     let voicePath = path.join(__dirname, `/../voice/${hashtags[1]}.mp3`)
-
     if (fs.existsSync(voicePath)) {
      reply({ type: 'action', action: 'record_audio' })
       reply({
@@ -326,12 +314,11 @@ networks.on('message', (evt, reply) => {
   }
 })
 
+//video hashtags
 networks.on('message', (evt, reply) => {
   let video = evt.text.match(/#([a-zA-Z]+)/)
-
   if (video && video.length > 1) {
     let videoPath = path.join(__dirname, `/../video/${video[1]}.mp4`)
-
     if (fs.existsSync(videoPath)) {
      reply({ type: 'action', action: 'record_video' })
       reply({
@@ -345,12 +332,11 @@ networks.on('message', (evt, reply) => {
   }
 })
 
+//img hashtags
 networks.on('message', (evt, reply) => {
-  let pic = evt.text.match(/#([a-zA-Z]+)/)
-
-  if (pic && pic.length > 1) {
-    let photoPath = path.join(__dirname, `/../pic/etc/${pic[1]}.jpg`)
-
+  let img = evt.text.match(/#([a-zA-Z]+)/)
+  if (img && img.length > 1) {
+    let photoPath = path.join(__dirname, `/../img/etc/${img[1]}.jpg`)
     if (fs.existsSync(photoPath)) {
      reply({ type: 'action', action: 'upload_photo' })
       reply({
@@ -364,12 +350,11 @@ networks.on('message', (evt, reply) => {
   }
 })
 
+//sticker hashtags soon with fileid
 networks.on('message', (evt, reply) => {
   let sticker = evt.text.match(/#([a-zA-Z]+)/)
-
   if (sticker && sticker.length > 1) {
     let stickerPath = path.join(__dirname, `/../sticker/${sticker[1]}.webp`)
-
     if (fs.existsSync(stickerPath)) {
       reply({
         type: 'sticker',
@@ -382,7 +367,8 @@ networks.on('message', (evt, reply) => {
   }
 })
 
-//thanks to @michealharker https://github.com/6697/6697-bot
+
+//spotify_uri thanks to @michealharker https://github.com/6697/6697-bot
 networks.on('message', (evt, reply) => {
   log('Received message event: %o', evt)
   if (/spotify:track:([A-z0-9]+)/.test(evt.text)) {
