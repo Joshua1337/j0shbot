@@ -1,0 +1,3 @@
+<b>MÖÖP MÖÖP MÖÖP</b>
+
+Hier ist die MaiMai-Polizei. Wegen des Verstosses gegen die nogf-Etikette in Form einer mutwilligen MaiMai-Unterschlagung sind sie hiermit zu einer Bußehandlung in Form der vollständigen Lektüre von /r/kreiswichs/ bis mindestens 3 Monate vor dem heutigen Tag verurteilt. Bitte achten sie darauf, in Zukunft alle MaiMais mit einer Relevanz von 5 Pfosten oder mehr für einen angemessenen Zeitraum an allen relevanten Stellen in ihren Sprachgebrauch einzubauen - in diesem Fall: das reflexive Verb "sich etw. gönnen" erfordert zwingend die Adverb-Adjektivkombination "so hart".
