@@ -7,7 +7,7 @@ import request from 'request'
 import { connect, message } from 'coffea'
 import { version } from '../package.json'
 
-export const htmlMessage = (msg) => {return {type: 'message',text: msg,options: {parse_mode: 'HTML'}}}
+export const htmlMessage = (msg) => {return {type: 'message',text: msg,options: {parse_mode: 'HTML', reply_to_message_id: evt && evt.raw && evt.raw.message_id}}}
 const networks = connect(config)
 const { log, info } = dude('bot')
 
@@ -52,11 +52,24 @@ networks.on('command', (evt, reply) => {
   break
   case 'about':
     reply({ type: 'action', action: 'typing' })
-    reply(htmlMessage(`JoshBot v${version} - https://github.com/6697/hashtag-bot`))
+    reply(htmlMessage(`JoshBot v${version} - https://github.com/Joshua1337/j0shbot`))
   break
   case 'issues':
+  case 'fehler':
+  case 'bug':
     reply({ type: 'action', action: 'typing' })
-    reply(htmlMessage('<b>Please report issues</b> <a href="https://github.com/6697/hashtag-bot/issues">here</a>'))
+    reply(htmlMessage('<b>Bitte melden Sie Fehler</b> <a href="https://github.com/Joshua1337/j0shbot/issues">hier</a>'))
+  break
+  case 'help':
+    reply({ type: 'action', action: 'typing' })
+    reply({
+      type: 'message',
+      text: fs.readFileSync(path.join(__dirname, '..', '/text/help.md')),
+      options: {
+          parse_mode: 'html',
+          reply_to_message_id: evt && evt.raw && evt.raw.message_id
+        }
+      })
   break
   case 'nogf':
     reply({ type: 'action', action: 'typing' })
