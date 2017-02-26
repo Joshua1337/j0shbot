@@ -1,4 +1,4 @@
-# j0shbot
+# j0shbot - https://t.me/j0shbot
 
 how to use it
 1. `git clone https://github.com/Joshua1337/j0shbot`
