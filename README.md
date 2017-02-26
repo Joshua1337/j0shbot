@@ -1,8 +1,8 @@
-# hashtag-bot
-A simple bot which you can send hashtags and the bot sends Voices, Videos or Photos.
+# j0shbot
 
-1. git clone https://github.com/6697/hashtag-bot/
-2. cd hashtag-bot
-3. npm install
+how to use it
+1. `git clone https://github.com/Joshua1337/j0shbot`
+2. `cd hashtag-bot`
+3. `npm install`
 4. edit the config and add the token from @BotFather
-5. npm start
+5. `npm start`
