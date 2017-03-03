@@ -1,5 +1,5 @@
 {
-  "name": "hashtag-bot",
+  "name": "j0sbot",
   "version": "1.0.2",
   "description": "A simple bot which you can send hashtags and the bot sends Voices, Videos or Photos.",
   "bin": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/6697/hashtag-bot.git"
+    "url": "git+https://github.com/Joshua1337/j0shbot.git"
   },
   "keywords": [
     "coffea",
@@ -29,12 +29,12 @@
     "irc",
     "telegram"
   ],
-  "author": "Joshua Dehler <me@j0sh.de>",
+  "author": "Joshua Dehler <j0shu4@icloud.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/6697/hashtag-bot/issues"
+    "url": "https://github.com/Joshua1337/j0shbot/issues"
   },
-  "homepage": "https://github.com/6697/hashtag-bot#readme",
+  "homepage": "https://github.com/Joshua1337/j0shbot#readme",
   "devDependencies": {
     "babel-cli": "^6.8.0",
     "babel-core": "^6.5.1",

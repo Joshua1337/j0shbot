@@ -273,22 +273,25 @@ networks.on('command', (evt, reply) => {
 })
 
 networks.on('new_chat_participant', (evt, reply) => {
-  console.log('Received message event: %o', evt)
+	console.log('Received message event: %o', evt)
+	let chatid = evt && evt.chat
+	if (chatid == -1001066517264) {
+	 } else { 
     reply({
     type: 'message',
-    text: `was geht brudi ✌🏼`,
+    text: `was geht brudi`,
     options: {
       parse_mode: 'markdown',
       reply_to_message_id: evt && evt.raw && evt.raw.message_id
     }
   })
-})
+}})
 
 networks.on('left_chat_participant', (evt, reply) => {
   console.log('Received message event: %o', evt)
     reply({
     type: 'message',
-    text: `hau rein brudi 💪🏼`,
+    text: `hau rein brudi`,
     options: {
       parse_mode: 'markdown',
       reply_to_message_id: evt && evt.raw && evt.raw.message_id
@@ -370,8 +373,11 @@ networks.on('message', (evt, reply) => {
 
 //spotify_uri thanks to @michealharker https://github.com/6697/6697-bot
 networks.on('message', (evt, reply) => {
-  log('Received message event: %o', evt)
-  if (/spotify:track:([A-z0-9]+)/.test(evt.text)) {
+    console.log('Received message event: %o', evt)
+    let chatid = evt && evt.chat
+	if (chatid == -1001066517264) {
+	 } else { 
+	if (/spotify:track:([A-z0-9]+)/.test(evt.text)) {
     let matches = evt.text.match(/spotify:track:([A-z0-9]+)/)
     let id = matches[1]
     request(`https://api.spotify.com/v1/tracks/${id}`, function (err, res, body) {
@@ -395,4 +401,4 @@ networks.on('message', (evt, reply) => {
       }
     })
   }
-})
+}})
