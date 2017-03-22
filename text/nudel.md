@@ -1,1 +1,42 @@
-<pre>Eine Nudel is ein – also n ganz’ Tach. \n Man kann im Winter Sommer, \n Man kann morgens abends essen, \n ein Nudel is wirklich ein sehr leckeres Gericht.\n Man kann Nudeln machen warm,\n man kann Nudeln machen kalt.\n	Also man kann in den Urlaub,\n	man kann nen Picknick machen,\n	man kann abends morgens essen,\n	wie man gerade Hunger hat.\n\n	Dawegen spielt’s keine Tageszeit,\n	keine Sonnenzeit, kein Winter oder so –\n	die Italiener essen es auch jeden Tach.\n	Also ist eine Nudel ein ein ein ewig’s Essen.\n\n	Egal aus was ist die Nudel gemacht ist,\n	egal wie Du Nudel zubereitet wird.\n	Jeder hat seinen Geschmack,\n	einer ist gerade morgens aufgestanden\n	ist – äh – gerne Nudeln\n	der macht sich auch morgens Nudeln –\n	kein bisschen…\n\n	Dawegen lass ich auf Nudeln nix kommen\n	Humor muss sein.\n	Dafür ist ja die humorvolle italienische Nudeln,\n	der hat ja auch Humor der Italiener.\n\n	Eine Nudel kräftigt –\n	eine Nudel kräftigt nicht nur,\n	die hat Energie bringt sie,\n	auch nich dann noch dafüchtüch\n	wenn man die gegessen hat,\n	hat man auch Freude an den ganzen Tag\n	um so schneller ist man, oder –\n	umso mehr baut man seine Kraft –\n	und seine Freude auf.\n\n	Das ist das Wichtige, ha haaa!\n\n	Die Nudel schmeckt, dadrauf kommts an. So!</pre>
+<pre>Eine Nudel is ein – also n ganz’ Tach.
+Man kann im Winter Sommer,
+Man kann morgens abends essen,
+ein Nudel is wirklich ein sehr leckeres Gericht.
+Man kann Nudeln machen warm,
+man kann Nudeln machen kalt.
+Also man kann in den Urlaub,
+man kann nen Picknick machen,
+man kann abends morgens essen,
+wie man gerade Hunger hat.
+
+Dawegen spielt’s keine Tageszeit,
+keine Sonnenzeit, kein Winter oder so –
+die Italiener essen es auch jeden Tach.
+Also ist eine Nudel ein ein ein ewig’s Essen.
+
+Egal aus was ist die Nudel gemacht ist,
+egal wie Du Nudel zubereitet wird.
+Jeder hat seinen Geschmack,
+einer ist gerade morgens aufgestanden
+ist – äh – gerne Nudeln
+der macht sich auch morgens Nudeln –
+kein bisschen…
+
+Dawegen lass ich auf Nudeln nix kommen
+Humor muss sein.
+Dafür ist ja die humorvolle italienische Nudeln,
+der hat ja auch Humor der Italiener.
+
+Eine Nudel kräftigt –
+eine Nudel kräftigt nicht nur,
+die hat Energie bringt sie,
+auch nich dann noch dafüchtüch
+wenn man die gegessen hat,
+hat man auch Freude an den ganzen Tag
+um so schneller ist man, oder –
+umso mehr baut man seine Kraft –
+und seine Freude auf.
+
+Das ist das Wichtige, ha haaa!
+
+Die Nudel schmeckt, dadrauf kommts an. So!</pre>
