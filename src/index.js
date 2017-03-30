@@ -281,7 +281,7 @@ networks.on('new_chat_participant', (evt, reply) => {
     type: 'message',
     text: `<b>was geht brudi ✌🏼</b>`,
     options: {
-      parse_mode: 'markdown',
+      parse_mode: 'html',
       reply_to_message_id: evt && evt.raw && evt.raw.message_id
     }
   })
@@ -293,7 +293,7 @@ networks.on('left_chat_participant', (evt, reply) => {
     type: 'message',
     text: `<b>hau rein brudi 💪🏼</b>`,
     options: {
-      parse_mode: 'markdown',
+      parse_mode: 'html',
       reply_to_message_id: evt && evt.raw && evt.raw.message_id
     }
   })
