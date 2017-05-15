@@ -269,6 +269,20 @@ networks.on('command', (evt, reply) => {
         }
       })
   break
+    case 'shibe';
+  let shibe = Math.floor((Math.random() * 456) + 1)
+	reply({ type: 'action', action: 'typing' })
+  reply({
+  type: 'message',
+  text: `<a href="https://t.me/muchshibe/${shibe}">Shibe :3</b>`,
+  options: {
+    parse_mode: 'html',
+    reply_to_message_id: evt && evt.raw && evt.raw.message_id
+  }
+  })
+  }
+})
+
   }
 })
 
