@@ -22,7 +22,7 @@ networks.on('command', (evt, reply) => {
 	        type: 'photo',
           data: fs.createReadStream(path.join(__dirname, `/../pic/maxi/${maxi}.jpg`)),
 	         options: {
-		           caption: 'Meow! 😻',
+		           caption: 'Meow! ðŸ˜»',
                reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
        	     }
         })
@@ -34,7 +34,7 @@ networks.on('command', (evt, reply) => {
       	 type: 'photo',
       	 data: fs.createReadStream(path.join(__dirname, `/../pic/snowball/${snowball}.jpg`)),
 	        options: {
-		          caption: 'Meow! 😻',
+		          caption: 'Meow! ðŸ˜»',
               reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
             }
       })
@@ -49,6 +49,18 @@ networks.on('command', (evt, reply) => {
           }
       })
   break
+
+case 'latency': {                                                     
+  reply({
+    type: 'message',
+    text: `${(Date.now() / 1000 - evt.raw.date).toFixed(3)} seconds.`,
+    options: {                                                        
+      reply_to_message_id: evt.raw.message_id,
+    }
+  })                                                                  
+                                                                      
+  break
+}
   case 'help':
     reply({ type: 'action', action: 'typing' })
     reply({
@@ -269,20 +281,17 @@ networks.on('command', (evt, reply) => {
         }
       })
   break
-    case 'shibe';
-  let shibe = Math.floor((Math.random() * 511) + 1)
+    case 'shibe':
+  let shibe = Math.floor((Math.random() * 456) + 1)
 	reply({ type: 'action', action: 'typing' })
   reply({
   type: 'message',
-  text: `<a href="https://t.me/muchshibe/${shibe}">Shibe :3</b>`,
+  text: `<a href="https://t.me/muchshibe/${shibe}">Shibe :3</a>`,
   options: {
     parse_mode: 'html',
     reply_to_message_id: evt && evt.raw && evt.raw.message_id
   }
   })
-  }
-})
-
   }
 })
 
@@ -293,7 +302,7 @@ networks.on('new_chat_participant', (evt, reply) => {
 	 } else {
     reply({
     type: 'message',
-    text: `<b>was geht brudi ✌🏼</b>`,
+    text: `<b>was geht brudi âœŒðŸ¼</b>`,
     options: {
       parse_mode: 'html',
       reply_to_message_id: evt && evt.raw && evt.raw.message_id
@@ -305,7 +314,7 @@ networks.on('left_chat_participant', (evt, reply) => {
   console.log('Received message event: %o', evt)
     reply({
     type: 'message',
-    text: `<b>hau rein brudi 💪🏼</b>`,
+    text: `<b>hau rein brudi ðŸ’ªðŸ¼</b>`,
     options: {
       parse_mode: 'html',
       reply_to_message_id: evt && evt.raw && evt.raw.message_id
@@ -406,7 +415,7 @@ networks.on('message', (evt, reply) => {
         let seconds = ((data && data.duration_ms % 60000) / 1000).toFixed(0)
         reply({
           type: 'message',
-          text: `*${title}* (${minutes}:${seconds < 10 ? '0' : ''}${seconds}) by *${artists}* - in album *${album}*.[​](${image_url})`,
+          text: `*${title}* (${minutes}:${seconds < 10 ? '0' : ''}${seconds}) by *${artists}* - in album *${album}*.[â€‹](${image_url})`,
           options: {
             parse_mode: 'markdown',
             reply_to_message_id: evt && evt.raw && evt.raw.message_id
