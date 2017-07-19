@@ -270,7 +270,7 @@ networks.on('command', (evt, reply) => {
       })
   break
     case 'shibe';
-  let shibe = Math.floor((Math.random() * 456) + 1)
+  let shibe = Math.floor((Math.random() * 511) + 1)
 	reply({ type: 'action', action: 'typing' })
   reply({
   type: 'message',
