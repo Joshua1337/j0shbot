@@ -30,7 +30,7 @@ networks.on('command', (evt, reply) => {
   case 'snowball':
 	let snowball = Math.floor((Math.random() * 10) + 1)
 	reply({ type: 'action', action: 'upload_photo' })
-      reply({
+        reply({
       	 type: 'photo',
       	 data: fs.createReadStream(path.join(__dirname, `/../pic/snowball/${snowball}.jpg`)),
 	        options: {
@@ -38,6 +38,7 @@ networks.on('command', (evt, reply) => {
               reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
             }
       })
+		  break
   case 'drachenlord':
 	let drache = Math.floor((Math.random() * 106) + 1)
 	reply({ type: 'action', action: 'record_audio' })
