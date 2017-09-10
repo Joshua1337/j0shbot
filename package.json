@@ -1,6 +1,6 @@
 {
   "name": "j0sbot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple bot which you can send hashtags and the bot sends Voices, Videos, Photos or german Copypastas",
   "bin": {
     "bot": "build/index.js"
@@ -12,7 +12,7 @@
     "watch": "cross-env NODE_ENV=development DEBUG=bot:* babel-watch -w src src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf build",
-    "compile": "babel --presets es2017 -d build/ src/",
+    "compile": "babel --presets es2015 -d build/ src/",
     "prepublish": "npm run clean && npm run compile"
   },
   "repository": {
@@ -40,7 +40,7 @@
     "babel-core": "^6.5.1",
     "babel-eslint": "^4.1.8",
     "babel-plugin-transform-object-rest-spread": "^6.5.0",
-    "babel-preset-es2017": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
     "babel-register": "^6.5.2",
     "babel-watch": "^2.0.2",
     "cross-env": "^1.0.7",
