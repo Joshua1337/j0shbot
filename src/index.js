@@ -1,4 +1,4 @@
-import dude from 'debug-dude'
+﻿import dude from 'debug-dude'
 import config from '../config.json'
 import fs from 'fs'
 import path from 'path'
@@ -341,6 +341,78 @@ networks.on('command', (evt, reply) => {
                 options: {
                     parse_mode: 'html',
                     reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
+                }
+            })
+            break
+			
+		case 'bibi':
+            let bibi = Math.floor((Math.random() * 1277) + 1)
+            reply({
+                type: 'action',
+                action: 'upload_photo'
+            })
+            reply({
+                type: 'photo',
+                data: fs.createReadStream(path.join(__dirname, `/../img/bibi/bibi (${bibi}).jpg`)),
+                options: {
+                    reply_to_message_id: evt && evt.raw && evt.raw.message_id
+                }
+            })
+            break	
+			
+		case '🅱️i🅱️i':
+            let bibi = Math.floor((Math.random() * 1277) + 1)
+            reply({
+                type: 'action',
+                action: 'upload_photo'
+            })
+            reply({
+                type: 'photo',
+                data: fs.createReadStream(path.join(__dirname, `/../img/bibi/bibi (${bibi}).jpg`)),
+                options: {
+                    reply_to_message_id: evt && evt.raw && evt.raw.message_id
+                }
+            })
+            break
+		case 'gif':
+            reply({
+                type: 'action',
+                action: 'typing'
+            })
+            reply({
+                type: 'message',
+                text: fs.readFileSync(path.join(__dirname, '..', '/text/gif.md')),
+                options: {
+                    parse_mode: 'html',
+                    reply_to_message_id: evt && evt.raw && evt.raw.message_id
+                }
+            })
+            break
+		case 'diepartei':
+            reply({
+                type: 'action',
+                action: 'typing'
+            })
+            reply({
+                type: 'message',
+                text: fs.readFileSync(path.join(__dirname, '..', '/text/diepartei.md')),
+                options: {
+                    parse_mode: 'html',
+                    reply_to_message_id: evt && evt.raw && evt.raw.message_id
+                }
+            })
+            break
+		case 'hipster':
+            reply({
+                type: 'action',
+                action: 'typing'
+            })
+            reply({
+                type: 'message',
+                text: fs.readFileSync(path.join(__dirname, '..', '/text/hipster.md')),
+                options: {
+                    parse_mode: 'html',
+                    reply_to_message_id: evt && evt.raw && evt.raw.message_id
                 }
             })
             break
