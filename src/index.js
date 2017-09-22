@@ -359,21 +359,6 @@ networks.on('command', (evt, reply) => {
                 }
             })
             break	
-			
-		case '🅱️i🅱️i':
-            let bibi = Math.floor((Math.random() * 1277) + 1)
-            reply({
-                type: 'action',
-                action: 'upload_photo'
-            })
-            reply({
-                type: 'photo',
-                data: fs.createReadStream(path.join(__dirname, `/../img/bibi/bibi (${bibi}).jpg`)),
-                options: {
-                    reply_to_message_id: evt && evt.raw && evt.raw.message_id
-                }
-            })
-            break
 		case 'gif':
             reply({
                 type: 'action',
@@ -435,10 +420,20 @@ networks.on('command', (evt, reply) => {
 
 networks.on('new_chat_participant', (evt, reply) => {
     console.log('Received message event: %o', evt)
-    let chatid = evt && evt.chat
-    if (chatid == -1001066517264) { //loungefilter xd 
-    } else {
-        reply({
+	let chatid = evt && evt.chat
+    if (chatid == -1001066517264, -1001064544612) { //loungefilter xd 
+    }
+	if (chatid == -1001064544612) { //englishfilter xd 
+	reply({
+            type: 'message',
+            text: `<b>sup bro ✌🏼</b>`,
+            options: {
+                parse_mode: 'html',
+                reply_to_message_id: evt && evt.raw && evt.raw.message_id
+            }
+    })
+	} else {
+		    reply({
             type: 'message',
             text: `<b>was geht brudi ✌🏼</b>`,
             options: {
@@ -451,6 +446,9 @@ networks.on('new_chat_participant', (evt, reply) => {
 
 networks.on('left_chat_participant', (evt, reply) => {
     console.log('Received message event: %o', evt)
+	let chatid = evt && evt.chat
+	if (chatid == -1001064544612) { //englishfilter xd 
+	} else {
     reply({
         type: 'message',
         text: `<b>hau rein brudi 💪🏼</b>`,
@@ -459,6 +457,7 @@ networks.on('left_chat_participant', (evt, reply) => {
             reply_to_message_id: evt && evt.raw && evt.raw.message_id
         }
     })
+	}
 })
 
 //voice hashtags soon using fileid xd
