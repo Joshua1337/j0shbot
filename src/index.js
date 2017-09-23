@@ -401,6 +401,21 @@ networks.on('command', (evt, reply) => {
                 }
             })
             break
+			
+		case 'nsfw':
+            reply({
+                type: 'action',
+                action: 'typing'
+            })
+            reply({
+                type: 'message',
+                text: fs.readFileSync(path.join(__dirname, '..', '/text/nsfw.md')),
+                options: {
+                    parse_mode: 'html',
+                    reply_to_message_id: evt && evt.raw && evt.raw.message_id
+                }
+            })
+            break
         case 'shibe':
             let shibe = Math.floor((Math.random() * 569) + 1)
             reply({
@@ -421,8 +436,6 @@ networks.on('command', (evt, reply) => {
 networks.on('new_chat_participant', (evt, reply) => {
     console.log('Received message event: %o', evt)
 	let chatid = evt && evt.chat
-    if (chatid == -1001066517264, -1001064544612) { //loungefilter xd 
-    }
 	if (chatid == -1001064544612) { //englishfilter xd 
 	reply({
             type: 'message',
@@ -432,6 +445,7 @@ networks.on('new_chat_participant', (evt, reply) => {
                 reply_to_message_id: evt && evt.raw && evt.raw.message_id
             }
     })
+	} else if (chatid == -1001066517264) {
 	} else {
 		    reply({
             type: 'message',
