@@ -12,4 +12,4 @@ how to use it
 
 5. `npm start`
 
-For help ask me on Telegram t.me/@j0shu4
+For help ask me on Telegram thttp://t.me/j0shu4
