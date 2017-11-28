@@ -1,0 +1,1 @@
+was haste gegen die Partei verstehst einfach kein linkshumor 😂😂😂👌👌👌 letztens wieder 30 afd Gruppen übernommen soooo witzig👌👌 leute gebt mir upvotes in dem ich pseudo satirische scheiße mache und drittklassige tweets von afdlern recycle Kommunismus ist wie arbeitslos sein nur das die linken stolz sind HAHAHAHA 👋👋

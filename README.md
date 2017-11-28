@@ -11,3 +11,5 @@ how to use it
 4. edit the config and add the token from @BotFather
 
 5. `npm start`
+
+For help ask me on Telegram thttp://t.me/j0shu4
