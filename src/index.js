@@ -53,6 +53,22 @@ networks.on('command', (evt, reply) => {
                 }
             })
             break
+        case 'kalle':
+            let kalle = Math.floor((Math.random() * 4) + 1)
+            reply({
+                type: 'action',
+                action: 'upload_photo'
+            })
+            reply({
+                type: 'photo',
+                data: fs.createReadStream(path.join(__dirname, `/../img/kalle/${kalle}.jpg`)),
+                options: {
+                    caption: 'Meow! 😻',
+                    reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
+                }
+            })
+            break
+
         case 'latency':
             {
                 reply({
@@ -64,6 +80,18 @@ networks.on('command', (evt, reply) => {
                 })
             }
             break
+case 'drachenlord':
+	let drache = Math.floor((Math.random() * 106) + 1)
+	reply({ type: 'action', action: 'record_audio' })
+     	 reply({
+      	 type: 'voice',
+      	 data: fs.createReadStream(path.join(__dirname, `/../voice/Dragenlord/${drache}.mp3`)),
+	        options: {
+		          reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
+    }
+    })
+break
+
         case 'help':
             reply({
                 type: 'action',
@@ -212,6 +240,20 @@ networks.on('command', (evt, reply) => {
             reply({
                 type: 'message',
                 text: fs.readFileSync(path.join(__dirname, '..', '/text/ruediger.md')),
+                options: {
+                    parse_mode: 'html',
+                    reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
+                }
+            })
+            break
+		case 'junge':
+            reply({
+                type: 'action',
+                action: 'typing'
+            })
+            reply({
+                type: 'message',
+                text: fs.readFileSync(path.join(__dirname, '..', '/text/junge.md')),
                 options: {
                     parse_mode: 'html',
                     reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
@@ -417,6 +459,7 @@ networks.on('command', (evt, reply) => {
             break
 
         case 'nsfw':
+ 	case 'nsfl':
             reply({
                 type: 'action',
                 action: 'typing'
