@@ -245,6 +245,19 @@ break
                     reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
                 }
             })
+        case 'linux':
+            reply({
+                type: 'action',
+                action: 'typing'
+            })
+            reply({
+                type: 'message',
+                text: fs.readFileSync(path.join(__dirname, '..', '/text/linux.md')),
+                options: {
+                    parse_mode: 'html',
+                    reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
+                }
+            })
             break
 		case 'junge':
             reply({
