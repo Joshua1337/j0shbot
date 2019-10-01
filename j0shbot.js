@@ -51,7 +51,7 @@ networks.on('command', function (evt, reply) {
                 type: 'photo',
                 data: _fs2.default.createReadStream(_path2.default.join(__dirname, '/../img/maxi/' + maxi + '.jpg')),
                 options: {
-                    caption: 'Meow! 😻',
+                    caption: 'Meow!  😻',
                     reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
                 }
             });
