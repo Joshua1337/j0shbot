@@ -1,6 +1,6 @@
 {
   "name": "j0sbot",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A simple bot which you can send hashtags and the bot sends Voices, Videos, Photos or german Copypastas",
   "bin": {
     "bot": "build/index.js"
