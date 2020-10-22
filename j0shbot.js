@@ -404,15 +404,16 @@ networks.on('command', function (evt, reply) {
             break;
 
         case 'bibi':
-            var bibi = Math.floor(Math.random() * 1277 + 1);
+            var bibi = Math.floor(Math.random() * 18837 + 1);
             reply({
                 type: 'action',
                 action: 'upload_photo'
             });
             reply({
-                type: 'photo',
-                data: _fs2.default.createReadStream(_path2.default.join(__dirname, '/../img/bibi/bibi (' + bibi + ').jpg')),
+                type: 'message',
+                text: '<a href="https://t.me/bibisbeautypalace69/' + bibi + '">Much Shibe :3</a>',
                 options: {
+                    parse_mode: 'html',
                     reply_to_message_id: evt && evt.raw && evt.raw.message_id
                 }
             });
