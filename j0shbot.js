@@ -476,7 +476,7 @@ networks.on('command', function (evt, reply) {
             });
             break;
         case 'shibe':
-            var shibe = Math.floor(Math.random() * 1202 + 1);
+            var shibe = Math.floor(Math.random() * 1201 + 1);
             reply({
                 type: 'action',
                 action: 'typing'
