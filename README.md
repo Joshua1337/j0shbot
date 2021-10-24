@@ -14,6 +14,6 @@ how to use it
 
 For help ask me on Telegram thttp://t.me/j0shu4
 
-
+config file is missing :(        
 
    
