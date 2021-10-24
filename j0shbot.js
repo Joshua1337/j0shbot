@@ -108,6 +108,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'nogf':
             reply({
                 type: 'action',
@@ -122,6 +123,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'gf':
             reply({
                 type: 'action',
@@ -136,6 +138,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'oshit':
             reply({
                 type: 'action',
@@ -150,6 +153,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'prank':
             reply({
                 type: 'action',
@@ -164,6 +168,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'lustig':
             reply({
                 type: 'action',
@@ -178,6 +183,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'kranplatz':
             reply({
                 type: 'action',
@@ -192,6 +198,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'nudel':
             reply({
                 type: 'action',
@@ -206,6 +213,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'ey':
             reply({
                 type: 'action',
@@ -220,6 +228,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'schokodrink':
             reply({
                 type: 'action',
@@ -234,6 +243,7 @@ networks.on('command', function (evt, reply) {
                 }
             });
             break;
+            
         case 'ruediger':
             reply({
                 type: 'action',
@@ -247,6 +257,7 @@ networks.on('command', function (evt, reply) {
                     reply_to_message_id: evt && evt.raw && evt.raw.reply_to_message && evt.raw.reply_to_message.message_id
                 }
             });
+            
             break;
         case 'junge':
             reply({
