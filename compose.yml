@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: 
+      context: .
+    configs:
+      - source: tg_config
+        target: /app/config.json
+configs:
+  tg_config:
+    file: ./config.json
